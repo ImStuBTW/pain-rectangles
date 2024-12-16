@@ -1,0 +1,201 @@
+units:
+  # kx and ky allow for easy- easi-er switching between MX and Choc.
+  kx: u
+  ky: u
+  # These variables allow for updating the previews on https://ergogen.ceoloide.com
+  $default_width: u
+  $default_height: u
+  # KiCAD places the PCB in the middle of nowhere to start with.
+  # These variables give a starting place for later shifts.
+  starting_x: 100
+  starting_y: -100
+
+  # The distance between the Function Row and the Number Row.
+  r0_gap: 0ky
+  # The distance between the arrow cluster and the Enter key.
+  cluster_spread: 0kx
+  num_spread: 0kx
+points:
+  zones:
+    r0:
+      anchor:
+        shift: [starting_x, starting_y+r0_gap]
+      columns:
+        esc:
+        f1:
+        f2:
+        f3:
+        f4:
+        f5:
+        f6:
+        f7:
+        f8:
+        f9:
+        f10:
+        f11:
+        f12:
+        del:
+        home:
+        end:
+        pgup:
+        pgdown:
+        fn:
+    r1:
+      anchor:
+        shift: [starting_x, starting_y-1ky]
+      columns:
+        backtick:
+        1:
+        2:
+        3:
+        4:
+        5:
+        6:
+        7:
+        8:
+        9:
+        0:
+        dash:
+        equals:
+        backspace:
+          key:
+            width: 2kx
+            shift: [0.5kx, 0ky]
+        numlock:
+          key:
+            spread: 2kx + cluster_spread
+        forwardslash:
+        multiply:
+        subtract:
+    r2:
+      anchor:
+        shift: [starting_x, starting_y-2ky]
+      columns:
+        tab:
+          key:
+            width: 1.5kx
+            shift: [0.25kx, 0ky]
+        q:
+          key:
+            spread: 1.5kx
+        w:
+        e:
+        r:
+        t:
+        y:
+        u:
+        i:
+        o:
+        p:
+        squareleft:
+        squareright:
+        backslash:
+          key:
+            width: 1.5kx
+            shift: [0.25kx, 0ky]
+        num7:
+          key:
+            spread: 1.5kx + cluster_spread
+        num8:
+        num9:
+        plus:
+          key:
+            height: 2ky
+            shift: [0kx, -0.5ky]
+    r3:
+      anchor:
+        shift: [starting_x, starting_y-3ky]
+      columns:
+        caps:
+          key:
+            width: 1.75kx
+            shift: [0.375kx, 0ky]
+        a:
+          key:
+            spread: 1.75kx
+        s:
+        d:
+        f:
+        g:
+        h:
+        j:
+        k:
+        l:
+        semicolon:
+        quote:
+        enter:
+          key:
+            width: 2.25kx
+            shift: [0.625kx, 0ky]
+        num4:
+          key:
+            spread: 2.25kx + cluster_spread + num_spread
+        num5:
+        num6:
+    r4:
+      anchor:
+        shift: [starting_x, starting_y-4ky]
+      columns:
+        lshift:
+          key:
+            width: 2.25kx
+            shift: [0.625kx, 0ky]
+        z:
+          key:
+            spread: 2.25kx
+        x:
+        c:
+        v:
+        b:
+        n:
+        m:
+        comma:
+        period:
+        question:
+        rshift:
+          key:
+            width: 1.75kx
+            shift: [0.375kx, 0ky]
+        up:
+          key:
+            spread: 1.75kx + cluster_spread
+        num1:
+        num2:
+        num3:
+        numenter:
+          key:
+            height: 2ky
+            shift: [0kx, -0.5ky]
+    r5:
+      anchor:
+        shift: [starting_x, starting_y-5ky]
+      columns:
+        lctrl:
+          key:
+            width: 1.25kx
+            shift: [0.125kx, 0ky]
+        lalt:
+          key:
+            spread: 1.25kx
+            width: 1.25kx
+            shift: [0.125kx, 0ky]
+        lcmd:
+          key:
+            spread: 1.25kx
+            width: 1.25kx
+            shift: [0.125kx, 0ky]
+        space:
+          key:
+            spread: 1.25kx
+            width: 6.25kx
+            shift: [2.625kx, 0ky]
+        rcmd:
+          key:
+            spread: 6.25kx
+        rfn:
+        rctrl:
+        left:
+        ldown:
+        right:
+        num0:
+        numperiod:
